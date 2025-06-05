@@ -27,6 +27,6 @@ with st.sidebar:
 
 # --- Routing Logic ---
 if selected_page == "Home":
-    st.switch_page("Home")  # Assumes pages/Home.py exists
+    st.switch_page("pages/home.py")  # Assumes pages/Home.py exists
 elif selected_page == "Loading":
-    st.switch_page("Loading")  # Assumes pages/Loading.py exists
+    st.switch_page("pages/loading_page.py")  # Assumes pages/Loading.py exists
