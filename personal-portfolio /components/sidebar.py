@@ -14,7 +14,7 @@ def render_sidebar():
         # Footer
         st.markdown(
             """
-            <div style='text-align: center; font-size: 14px; margin-top: 2rem;'>
+            <div style='text-align: center; font-size: 16px; margin-top: 2rem;'>
                 Made with <img src='https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg' 
                 width='20' style='vertical-align: middle;'/> by LT
             </div>
