@@ -1,20 +1,21 @@
 import streamlit as st
 from PIL import Image
 
-
-# --- Load PNG image ---
+# --- Load the image ---
 logo_image = Image.open("assets/Futuristic_Tech_Logo.png")
 
-# --- Sidebar Layout ---
+# --- Sidebar Content ---
 with st.sidebar:
-    # Display PNG logo at top
+    # Display the logo at the very top
     st.image(logo_image, width=200)
 
+    # Navigation section
     st.markdown("## Navigation")
     selected_page = st.radio("Choose a page:", ["Home", "Loading"])
 
     st.markdown("---")
 
+    # Footer / Signature
     st.markdown(
         """
         <div style="display: flex; align-items: center;">            
@@ -24,8 +25,8 @@ with st.sidebar:
         unsafe_allow_html=True
     )
 
-# --- Page Router ---
+# --- Routing Logic ---
 if selected_page == "Home":
-    st.switch_page("webpages/home.py")
+    st.switch_page("Home")  # Assumes pages/Home.py exists
 elif selected_page == "Loading":
-    st.switch_page("webpages/loading_page.py")
+    st.switch_page("Loading")  # Assumes pages/Loading.py exists
