@@ -8,7 +8,7 @@ def render_sidebar():
         st.image(logo, use_container_width=True)
 
         # Nav Header
-        st.markdown("## 📂 Navigation")
+        # st.markdown("## 📂 Navigation")
         st.markdown("---")
 
         # Footer
