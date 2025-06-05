@@ -16,7 +16,7 @@ def render_sidebar():
             """
             <div style='text-align: center; font-size: 16px; margin-top: 2rem;'>
                 Made with <img src='https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg' 
-                width='10' style='vertical-align: middle;'/> by LT
+                width='10' style='width: 16px; height: 16px; vertical-align: middle;'/> by LT
             </div>
             """,
             unsafe_allow_html=True
