@@ -9,6 +9,29 @@ def render_sidebar():
 
         # Nav Header
         # st.markdown("## 📂 Navigation")
+
+
+        st.markdown("### 🌐 Connect With Me")
+
+        st.markdown(
+            """
+            <div style='text-align: center;'>
+                <a href="https://www.linkedin.com/in/ldwit/" target="_blank" style="margin-right: 15px;">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" width="24" style="filter: invert(100%);">
+                </a>
+                <a href="https://dev.to/ldwit" target="_blank" style="margin-right: 15px;">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/devdotto.svg" width="24" style="filter: invert(100%);">
+                </a>
+                <a href="https://github.com/ldwit" target="_blank">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" width="24" style="filter: invert(100%);">
+                </a>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+
+
+
         st.markdown("---")
 
         # Footer
