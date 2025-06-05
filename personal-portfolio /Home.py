@@ -9,5 +9,5 @@ apply_global_styles()
 
 render_sidebar()
 
-st.title("👋 Welcome to My Project Portfolio")
+st.title("🛠 Welcome to My Project Portfolio")
 st.write("Explore my work, skills, and more... All powered by Python + Streamlit.")
