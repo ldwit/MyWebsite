@@ -44,7 +44,7 @@ st.markdown(
 )
 
 # --- Main Project Description ---
-st.markdown("## 📊 Project Overview")
+st.markdown("### 📊 Project Overview")
 st.write("""
 The setup_nfl_data_lake.py script performs the following actions:
 
@@ -64,9 +64,9 @@ st.markdown("### 🔗 Project Repository")
 st.markdown("[📂 View on GitHub](https://github.com/ldwit/NFLDataLake)")
 
 # --- Project Details ---
-st.markdown("## 🔍 Project Details")
+st.markdown("### 🔍 Project Details")
 st.markdown("""
-## 🏈 NFL Data Lake – AWS
+### 🏈 NFL Data Lake – AWS
 
 This repository contains the `setup_nfl_data_lake.py` script, which automates the creation of a data lake for NFL analytics using AWS services. The script integrates **Amazon S3**, **AWS Glue**, and **Amazon Athena**, and sets up the infrastructure needed to store and query NFL-related data.
 
