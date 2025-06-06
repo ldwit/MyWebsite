@@ -37,7 +37,7 @@ st.markdown(
     </style>
 
     <div class="typewriter">
-      <h2>🛰 Initializing Project: NFL Data Lake</h2>
+      <h2>🖥️ Initializing Project... ✅ NFL Data Lake</h2>
     </div>
     """,
     unsafe_allow_html=True
@@ -46,34 +46,208 @@ st.markdown(
 # --- Main Project Description ---
 st.markdown("## 📊 Project Overview")
 st.write("""
-This project leverages **Python, AWS Glue, S3, Athena**, and the **SportsData API** to build a cloud-based NFL data lake.
+The setup_nfl_data_lake.py script performs the following actions:
 
-The goal is to create a scalable pipeline that collects, stores, and queries player stats for interactive analysis — all using serverless technologies.
-""")
+✅ Creates an Amazon S3 bucket to store raw and processed data.
+
+✅ Uploads sample NFL player data (JSON format) to the S3 bucket.
+
+✅ Creates an AWS Glue database and an external table for querying the data.
+
+✅ Configures Amazon Athena for querying data stored in the S3 bucket.""")
 
 # --- Architecture Diagram (Optional) ---
 # st.image("assets/nfl_data_architecture.png", caption="System Architecture", use_column_width=True)
 
-# --- Key Features ---
-st.markdown("## 🔍 Key Features")
+# --- Optional GitHub Link ---
+st.markdown("### 🔗 Project Repository")
+st.markdown("[📂 View on GitHub](https://github.com/ldwit/NFLDataLake)")
+
+# --- Project Details ---
+st.markdown("## 🔍 Project Details")
 st.markdown("""
-- ✅ Real-time data ingestion from the SportsData.io API
-- ✅ Storage in AWS S3 in raw and processed formats
-- ✅ Table creation and queries via AWS Glue & Athena
-- ✅ Python scripting with `boto3`, `requests`, and `.env` config
+## 🏈 NFL Data Lake – AWS
+
+This repository contains the `setup_nfl_data_lake.py` script, which automates the creation of a data lake for NFL analytics using AWS services. The script integrates **Amazon S3**, **AWS Glue**, and **Amazon Athena**, and sets up the infrastructure needed to store and query NFL-related data.
+
+---
+
+### 📁 Project Structure
+
+```
+NFLDataLake/
+│
+├── src/
+│   ├── __init__.py
+│   └── setup_nfl_data_lake.py
+│
+├── tests/           # Placeholder for test files
+│
+├── data/            # Placeholder for raw or processed data
+│
+├── requirements.txt
+├── README.md
+└── .env             # Environment variables for secure configurations
+```
+
+---
+
+### ⚙️ Prerequisites
+
+#### 1. AWS Account Setup
+
+Create an AWS user with the following permissions:
+
+- `AmazonS3FullAccess`  
+- `AWSGlueServiceRole`  
+- `AmazonAthenaFullAccess`  
+
+Generate and securely store your **AWS access keys**.
+
+#### 2. Environment Variables
+
+Add the following keys to your `.env` file:
+
+```
+AWS_ACCESS_KEY_ID=your_access_key_id
+AWS_SECRET_ACCESS_KEY=your_secret_access_key
+SPORTS_DATA_API_KEY=your_sportsdata_api_key
+NFL_ENDPOINT=https://api.sportsdata.io/v3/nfl/scores/json/Players
+```
+
+#### 3. Install Required Packages
+
+Install dependencies using:
+
+```
+pip install -r requirements.txt
+```
+
+Make sure the following packages are listed in `requirements.txt`:
+
+- `boto3`
+- `requests`
+- `python-dotenv`
+
+---
+
+### 🚀 Setup Instructions
+
+#### Step 1: Configure AWS Resources
+
+Run the Python script:
+
+```
+python3 src/setup_nfl_data_lake.py
+```
+
+The script will:
+
+- Create the necessary S3 bucket  
+- Fetch and upload NFL player data  
+- Set up a Glue database and table  
+- Configure Athena for querying the data
+
+#### Step 2: Verify Resources
+
+- **S3 Bucket**: Confirm it contains `raw-data/nfl_player_data.jsonl`
+- **Glue Table**: Check for `nfl_players` table in AWS Glue Console
+- **Athena Query**: Run a sample query like:
+
+```
+SELECT FirstName, LastName, Position, Team
+FROM nfl_players
+WHERE Position = 'QB';
+```
+
+---
+
+### 🐞 Common Issues
+
+#### 1. Invalid AWS Access Key Error
+
+**Issue**:
+
+```
+An error occurred (InvalidAccessKeyId) when calling the CreateBucket operation
+```
+
+**Cause**:
+
+- Incorrect or missing AWS credentials in `.env`
+- Expired or revoked keys
+
+**Solution**:
+
+- Double-check `.env` for correct keys  
+- Ensure your IAM user has appropriate permissions  
+- If using EC2 or CloudShell, attach proper IAM role
+
+---
+
+#### 2. Invalid or Missing NFL Endpoint
+
+**Issue**:
+
+```
+Invalid URL 'None': No scheme supplied.
+```
+
+**Cause**:
+
+- Missing or incorrect `NFL_ENDPOINT` in `.env`
+
+**Solution**:
+
+- Set it correctly in `.env`:
+
+```
+NFL_ENDPOINT=https://api.sportsdata.io/v3/nfl/scores/json/Players
+```
+
+- Ensure your API key is valid and active
+
+---
+
+#### 3. Athena Query Result Location Not Configured
+
+**Issue**:
+
+```
+Query failed: No query result location set for the query.
+```
+
+**Cause**:
+
+- Athena result location not configured in the console
+
+**Solution**:
+
+- Go to **Athena Console** → **Settings**  
+- Set result location to your S3 bucket, e.g.:
+
+```
+s3://your-bucket-name/athena-results/
+```
+
+- Confirm proper permissions are set on the bucket
+
+---
+
+### 📘 Key Learnings
+
+- **AWS Services Integration**: Efficient use of S3, Glue, Athena  
+- **Data Automation**: Automating infrastructure + ingestion  
+- **Secure Configuration**: Managing credentials and tokens safely
 """)
 
 # --- Tools & Skills ---
-st.markdown("## 🧰 Tools Used")
+st.markdown("### 🧰 Tools Used")
 cols = st.columns(4)
 tools = ["Python", "AWS S3", "Glue", "Athena"]
 for i, tool in enumerate(tools):
     with cols[i]:
         st.markdown(f"🔹 {tool}")
-
-# --- Optional GitHub Link ---
-st.markdown("## 🔗 Project Repository")
-st.markdown("[📂 View on GitHub](https://github.com/ldwit/nfl-data-lake)")
 
 # --- Optional Back Button ---
 # st.page_link("pages/1_Projects.py", label="⬅️ Back to Projects", icon="⬅️")

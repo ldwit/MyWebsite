@@ -1,4 +1,3 @@
-import os
 import streamlit as st
 from PIL import Image
 
@@ -38,9 +37,9 @@ def render_sidebar():
         # Footer
         st.markdown(
             """
-            <div style='text-align: center; font-size: 16px; margin-top: 2rem;'>
+            <div style='text-align: center; font-size: 18px; margin-top: 2rem;'>
                 Made with <img src='https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg' 
-                width='10' style='width: 16px; height: 16px; vertical-align: middle;'/> by LT
+                width='10' style='width: 18px; height: 18px; vertical-align: middle;'/> by LT
             </div>
             """,
             unsafe_allow_html=True
