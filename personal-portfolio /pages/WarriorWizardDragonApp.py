@@ -3,7 +3,7 @@ from utils.style import apply_global_styles
 from components.sidebar import render_sidebar
 
 # --- Page Setup ---
-st.set_page_config(page_title="Treasure Island App", page_icon="🏝️", layout="wide")
+st.set_page_config(page_title="Warrior Wizard Dragon App", page_icon="🐉", layout="wide")
 
 # Apply styles and sidebar
 apply_global_styles()
@@ -37,7 +37,7 @@ st.markdown(
     </style>
 
     <div class="typewriter">
-      <h2>🏝️ Initializing Project... ✅ Treasure Island App</h2>
+      <h2>🐉 Initializing Project... ✅ Warrior Wizard Dragon App</h2>
     </div>
     """,
     unsafe_allow_html=True
@@ -46,7 +46,7 @@ st.markdown(
 # --- Overview ---
 st.markdown("### 📋 Project Overview")
 st.write("""
-Embark on a fun, browser-based text adventure built with **Python** and **Streamlit**! In **Treasure Island**, players make decisions at every turn to find the hidden treasure—or face game-ending consequences. A perfect beginner project for exploring **decision trees** and interactive web apps.
+A fun, Rock-Paper-Scissors-style game built with **Python** and **Streamlit**, where the **Wizard defeats the Dragon**, the **Warrior defeats the Wizard**, and the **Dragon defeats the Warrior**. Includes **ASCII art**, user vs computer gameplay, and an interactive UI.
 """)
 st.markdown("---")
 
@@ -57,17 +57,21 @@ st.markdown("---")
 
 # --- Live App + GitHub ---
 st.markdown("### 🚀 Project Links")
-st.markdown("[🌐 Launch Web App](https://treasureislandapp.streamlit.app/)")
-st.markdown("[📂 View on GitHub](https://github.com/ldwit/TreasureIslandApp)")
+st.markdown("[🌐 Launch Web App](https://wizardwarriordragonapp.streamlit.app/)")
+st.markdown("[📂 View on GitHub](https://github.com/ldwit/WizardWarriorDragonApp)")
 st.markdown("---")
 
 # --- How to Play ---
 st.markdown("### 🎮 How to Play")
 st.markdown("""
 - Launch the app locally or on Streamlit Cloud  
-- Make decisions by clicking buttons or typing answers  
-- Reach the treasure by choosing wisely  
-- Hit "Play Again" if you meet an untimely end  
+- Choose your champion: Warrior, Wizard, or Dragon  
+- The computer randomly selects a challenger  
+- Match outcomes follow these rules:
+    - 🧙‍♂️ Wizard defeats 🐉 Dragon  
+    - ⚔️ Warrior defeats 🧙‍♂️ Wizard  
+    - 🐉 Dragon defeats ⚔️ Warrior  
+- Results include fun ASCII art and clear win/loss messages  
 """)
 st.markdown("---")
 
@@ -87,8 +91,8 @@ st.markdown("""
 To run the project locally:
 
 ```
-git clone https://github.com/ldwit/treasure-island.git
-cd treasure-island
+git clone https://github.com/ldwit/WizardWarriorDragonApp
+cd warrior-wizard-dragon
 ```
 
 **Create a virtual environment(optional):**
@@ -108,13 +112,13 @@ cd treasure-island
 **Install dependencies:**
 
 ```
-pip install -r requirements.txt
+pip install streamlit
 ```
 
 **Run the app:**
 
 ```
-streamlit run treasure_island.py
+streamlit run wizard_warrior_dragon.py
 ```
 """)
 st.markdown("---")
@@ -122,27 +126,27 @@ st.markdown("---")
 # --- Project Structure ---
 st.markdown("### 📁 Project Structure")
 st.code("""
-treasure-island/
-├── treasure_island.py        # Main Streamlit app
-├── requirements.txt          # Python dependencies
-└── README.md                 # Project documentation
+warrior-wizard-dragon/
+├── wizard_warrior_dragon.py   # Main Streamlit app
+├── requirements.txt           # Python dependencies
+└── README.md                  # Project documentation
 """)
 st.markdown("---")
 
 # --- Features ---
 st.markdown("### 💡 Features")
 st.markdown("""
-- 🧠 Branching decision tree  
-- 🔍 Riddle interaction with text input  
-- 🎉 Multiple endings (win, game over, hint loops)  
-- 🌈 Streamlit UI with emojis, alerts, and balloons  
+- 🧙‍♂️ Mythical fantasy theme with ASCII art  
+- ⚔️ User vs Computer battle  
+- 🧠 Streamlit interface with interactive buttons  
+- 🎯 Clear outcomes based on fantasy logic  
 """)
 st.markdown("---")
 
 # --- Acknowledgements ---
 st.markdown("### 🙌 Acknowledgements")
 st.write("""
-Built for fun and learning! Inspired by classic text-based adventure games.
+Built for fun, fantasy, and learning. Inspired by the simplicity of Rock-Paper-Scissors and the magic of text-based games.
 """)
 st.markdown("---")
 
