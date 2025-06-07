@@ -48,10 +48,12 @@ st.markdown("### 📋 Project Overview")
 st.write("""
 This project provides step-by-step instructions for setting up a **SAML integration** between **Okta** and **Salesforce** to enable Single Sign-On (SSO).
 """)
+st.markdown("---")
 
 # --- External Resource ---
 st.markdown("### 🎥 Integration Walkthrough by AskmeIdentity")
 st.markdown("[📺 Watch on YouTube](https://www.youtube.com/watch?v=75bFlR5SELo&list=PLLtgG_DQlifXL2TYeYpzn-AnF5yEJ1OQQ&index=14)")
+st.markdown("---")
 
 # --- Prerequisites ---
 st.markdown("### ⚙️ Prerequisites")
@@ -59,6 +61,7 @@ st.markdown("""
 - ✅ **Okta Admin (Dev) Account** with access to the Admin Console  
 - ✅ **Salesforce Admin (Dev) Account** with administrator privileges
 """)
+st.markdown("---")
 
 # --- Step-by-Step Setup ---
 st.markdown("### 🛠️ Step-by-Step Instructions")
@@ -91,6 +94,7 @@ st.markdown("""
 - Log in via Okta using the Audience/Entity ID URL  
 - If mapped correctly, you’ll be redirected into Salesforce  
 """)
+st.markdown("---")
 
 # --- Troubleshooting Tips ---
 st.markdown("### 🐞 Troubleshooting Tips")
@@ -98,12 +102,14 @@ st.markdown("""
 - **User Profile Mismatch**: Check user identifiers in Okta vs. Salesforce  
 - **Certificate Errors**: Ensure correct metadata and certificate were uploaded  
 """)
+st.markdown("---")
 
 # --- Key Learnings ---
 st.markdown("### 📘 Key Learning Objective")
 st.write("""
 By completing this setup, you've enabled **secure SSO integration** between Okta and Salesforce using **SAML 2.0**, enhancing identity federation and user experience.
 """)
+st.markdown("---")
 
 # --- Tools & Skills ---
 st.markdown("### 🧰 Tools Used")
