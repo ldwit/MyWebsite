@@ -242,12 +242,13 @@ s3://your-bucket-name/athena-results/
 """)
 
 # --- Tools & Skills ---
-st.markdown("### 🧰 Tools Used")
+st.markdown("### 🧰 Tech Stack")
 cols = st.columns(4)
 tools = ["Python", "AWS S3", "Glue", "Athena"]
 for i, tool in enumerate(tools):
     with cols[i]:
         st.markdown(f"🔹 {tool}")
+st.markdown("---")
 
 # --- Optional Back Button ---
-# st.page_link("pages/1_Projects.py", label="⬅️ Back to Projects", icon="⬅️")
+st.page_link("pages/1_Projects.py", label="⬅️ Back to Projects", icon="⬅️")

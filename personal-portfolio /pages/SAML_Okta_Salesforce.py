@@ -112,12 +112,13 @@ By completing this setup, you've enabled **secure SSO integration** between Okta
 st.markdown("---")
 
 # --- Tools & Skills ---
-st.markdown("### 🧰 Tools Used")
+st.markdown("### 🧰 Tech Stack")
 cols = st.columns(3)
 tools = ["Okta", "Salesforce", "SAML 2.0"]
 for i, tool in enumerate(tools):
     with cols[i]:
         st.markdown(f"🔹 {tool}")
+st.markdown("---")
 
 # --- Optional Back Button ---
-# st.page_link("pages/1_Projects.py", label="⬅️ Back to Projects", icon="⬅️")
+st.page_link("pages/1_Projects.py", label="⬅️ Back to Projects", icon="⬅️")
