@@ -55,6 +55,7 @@ The setup_nfl_data_lake.py script performs the following actions:
 ✅ Creates an AWS Glue database and an external table for querying the data.
 
 ✅ Configures Amazon Athena for querying data stored in the S3 bucket.""")
+st.markdown("---")
 
 # --- Architecture Diagram (Optional) ---
 # st.image("assets/nfl_data_architecture.png", caption="System Architecture", use_column_width=True)
@@ -62,6 +63,7 @@ The setup_nfl_data_lake.py script performs the following actions:
 # --- Optional GitHub Link ---
 st.markdown("### 🔗 Project Repository")
 st.markdown("[📂 View on GitHub](https://github.com/ldwit/NFLDataLake)")
+st.markdown("---")
 
 # --- Project Details ---
 st.markdown("### 🔍 Project Details")
@@ -183,7 +185,6 @@ An error occurred (InvalidAccessKeyId) when calling the CreateBucket operation
 - Ensure your IAM user has appropriate permissions  
 - If using EC2 or CloudShell, attach proper IAM role
 
----
 
 #### 2. Invalid or Missing NFL Endpoint
 
@@ -207,7 +208,6 @@ NFL_ENDPOINT=https://api.sportsdata.io/v3/nfl/scores/json/Players
 
 - Ensure your API key is valid and active
 
----
 
 #### 3. Athena Query Result Location Not Configured
 
@@ -240,6 +240,7 @@ s3://your-bucket-name/athena-results/
 - **Data Automation**: Automating infrastructure + ingestion  
 - **Secure Configuration**: Managing credentials and tokens safely
 """)
+st.markdown("---")
 
 # --- Tools & Skills ---
 st.markdown("### 🧰 Tech Stack")
