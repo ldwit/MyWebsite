@@ -3,7 +3,6 @@ from utils.style import apply_global_styles
 from components.sidebar import render_sidebar
 
 
-
 # --- Page Setup ---
 st.set_page_config(page_title="Projects", page_icon="🧩", layout="wide")
 

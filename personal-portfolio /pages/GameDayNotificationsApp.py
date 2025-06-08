@@ -6,6 +6,9 @@ from components.sidebar import render_sidebar
 # --- Page Setup ---
 st.set_page_config(page_title="Game Day Notifications App", page_icon="📣", layout="wide")
 
+# --- Anchor for Back to Top ---
+st.markdown('<a name="top"></a>', unsafe_allow_html=True)
+
 # Apply styles and sidebar
 apply_global_styles()
 render_sidebar()
@@ -124,6 +127,20 @@ st.markdown("""
 - Handling API responses and sending dynamic alerts
 """)
 st.markdown("---")
+
+# --- Back to Top Button ---
+st.markdown(
+    """
+    <a href="#top">
+        <button style="position:fixed; bottom:40px; right:30px; background-color:#00FFF7;
+                       color:black; border:none; border-radius:12px; padding:10px 16px;
+                       font-weight:bold; cursor:pointer; box-shadow:0 4px 6px rgba(0,0,0,0.3);">
+            ⬆️ Back to Top
+        </button>
+    </a>
+    """,
+    unsafe_allow_html=True
+)
 
 # --- Optional Back Button ---
 st.page_link("pages/1_Projects.py", label="⬅️ Back to Projects", icon="⬅️")
