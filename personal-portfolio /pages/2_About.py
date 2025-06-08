@@ -57,8 +57,7 @@ st.markdown("---")
 
 # --- Quick Info ---
 st.markdown("""
-- 🌍 Based in **Aubrey, TX**  
-- 🖥️ Portfolio: [ldwit.com](http://www.ldwit.com)  
+- 🌍 Based in **Aubrey, TX**   
 - ✉️ Contact: [laterral.williams@ldwit.com](mailto:laterral.williams@ldwit.com)  
 - 🧠 Currently studying **Linux (RHEL 9)**
 """)
