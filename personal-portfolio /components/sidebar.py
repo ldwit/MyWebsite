@@ -16,7 +16,7 @@ def render_sidebar():
         # st.sidebar.title("🔍 Navigation")
         st.sidebar.page_link("Home.py", label="🏠 Home")
         st.sidebar.page_link("/workspaces/MyWebsite/personal-portfolio /pages/1_Projects.py", label="📂 Projects")
-        st.sidebar.page_link("/workspaces/MyWebsite/personal-portfolio /pages/3_Professional_Development.py", label="🎓 Professional Development")
+        st.sidebar.page_link("/workspaces/MyWebsite/personal-portfolio /pages/3_Professional_Development.py", label="🎓 Development")
         st.sidebar.page_link("/workspaces/MyWebsite/personal-portfolio /pages/2_About.py", label="👤 About")
         st.markdown("---")
 
