@@ -45,8 +45,23 @@ st.markdown(
 )
 
 st.markdown("""
-<blockquote style="font-size:18px;">“Education is the most powerful weapon which you can use to change the world.”<br>
-<span style="float:center;">— Nelson Mandela</span></blockquote>
+ <style>
+    .hero-text {
+        font-size: 2rem;
+        font-weight: 600;
+        color: #00FFF7;
+        margin-bottom: 0.5rem;
+    }
+    .quote {
+        font-style: italic;
+        font-size: 1.2rem;
+        color: #AAAAAA;
+    }
+    </style>
+<div class="quote">
+“Education is the most powerful weapon which you can use to change the world.”<br>
+— Nelson Mandela
+</div>
 """, unsafe_allow_html=True)
 st.markdown("---")
 
@@ -83,7 +98,7 @@ with col3:
 st.markdown("---")
 
 # --- Current Studies ---
-st.markdown("## 📘 Current Studies")
+st.markdown("### 📘 Current Studies")
 st.markdown("""
 - **Red Hat Certified System Administrator (RHCSA)** — Currently studying through [CloudWhistler](https://www.cloudwhistler.com)
 """)
