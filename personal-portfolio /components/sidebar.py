@@ -3,13 +3,26 @@ from PIL import Image
 
 def render_sidebar():
     with st.sidebar:
+        # Hide default sidebar page navigation
+        st.markdown("""
+            <style>
+            [data-testid="stSidebarNav"] {
+                display: none;
+            }
+            </style>
+            """, unsafe_allow_html=True)
+
+        # --- Your custom sidebar content below ---
+        # st.sidebar.title("🔍 Navigation")
+        st.sidebar.page_link("Home.py", label="🏠 Home")
+        st.sidebar.page_link("/workspaces/MyWebsite/personal-portfolio /pages/1_Projects.py", label="📂 Projects")
+        st.sidebar.page_link("/workspaces/MyWebsite/personal-portfolio /pages/3_Professional_Development.py", label="🎓 Professional Development")
+        st.sidebar.page_link("/workspaces/MyWebsite/personal-portfolio /pages/2_About.py", label="👤 About")
+        st.markdown("---")
+
         # Logo
         logo = Image.open("assets/Futuristic_Tech_Logo.png")
         st.image(logo, use_container_width=True)
-
-        # Nav Header
-        # st.markdown("## 📂 Navigation")
-
 
         st.markdown("### 🌐 Connect With Me")
 
@@ -29,7 +42,6 @@ def render_sidebar():
             """,
             unsafe_allow_html=True
         )
-
 
 
         st.markdown("---")
