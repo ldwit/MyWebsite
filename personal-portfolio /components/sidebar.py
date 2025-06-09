@@ -7,7 +7,10 @@ def render_sidebar():
         st.markdown("""
             <style>
             [data-testid="stSidebarNav"] {
-                display: none;
+                width: 100px !important;
+                min-width: 100px !important;
+                max-width: 100px !important;
+                display: none;                
             }
             </style>
             """, unsafe_allow_html=True)
