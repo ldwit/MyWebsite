@@ -1,9 +1,23 @@
+
 import streamlit as st
 import os
 import time
+from pathlib import Path
 
 # --- Page Setup ---
 st.set_page_config(page_title="👾 Digital Terminal", layout="centered")
+
+# --- Hide Sidebar ---
+st.markdown("""
+    <style>
+        [data-testid="stSidebar"] {
+            display: none;
+        }
+        [data-testid="stSidebarNav"] {
+            display: none;
+        }
+    </style>
+""", unsafe_allow_html=True)
 
 # --- Visitor Counter File Path ---
 counter_file = "assets/visit_counter.txt"
@@ -15,7 +29,8 @@ if not os.path.exists(counter_file):
         f.write("0")
 
 with open(counter_file, "r") as f:
-    count = int(f.read().strip()) + 1
+    content = f.read().strip()
+    count = int(content) + 1 if content else 1
 
 with open(counter_file, "w") as f:
     f.write(str(count))
@@ -76,7 +91,7 @@ if command.lower().strip() in ["init", "start", "launch"]:
     with st.spinner("Loading environment..."):
         time.sleep(2)
     st.success("Access Granted ✅")
-    st.page_link("Home.py", label="💡 Enter Site", icon="🚀")
+    st.page_link("personal-portfolio /Home.py", label="💡 Enter Site", icon="🚀")
 elif command:
     st.error("Access Denied ❌ – Try: 'init', 'start', or 'launch'")
 
