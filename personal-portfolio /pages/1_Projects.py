@@ -76,7 +76,7 @@ st.markdown("### ☁️ <a id='cloud-projects'>Cloud Projects</a>", unsafe_allow
 
 st.markdown("#### 🔸 Game Day Schedule API")
 st.write("A containerized sports API system using ECS Fargate, API Gateway, and Docker.")
-st.page_link("/workspaces/MyWebsite/personal-portfolio /pages/projects/GameDayScheduleAPI.py", label="🔗 View Project →", icon="📅")
+st.page_link("/workspaces/MyWebsite/personal-portfolio /pages/GameDayScheduleAPI.py", label="🔗 View Project →", icon="📅")
 
 st.markdown("#### 🔸 Game Day Notifications")
 st.write("Real-time NBA score alerts via SNS using Lambda, EventBridge, and SportsData API.")  
@@ -147,7 +147,4 @@ st.markdown(
 )
 
 # --- Back Button ---
-st.page_link("Home.py", label="⬅️ Back to Home", icon="⬅️")
-
-
-
+st.page_link("pages/Home.py", label="⬅️ Back to Home", icon="⬅️")
