@@ -7,6 +7,46 @@ from pathlib import Path
 # --- Page Setup ---
 st.set_page_config(page_title="👾 Digital Terminal", layout="centered")
 
+# --- Add Matrix Background Effect ---
+st.markdown("""
+    <style>
+        body {
+            background-color: #000;
+        }
+        .matrix-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+            background: repeating-linear-gradient(
+                to bottom,
+                rgba(0, 255, 0, 0.1) 0px,
+                rgba(0, 255, 0, 0.1) 2px,
+                transparent 2px,
+                transparent 4px
+            );
+            animation: move 0.3s linear infinite;
+        }
+        @keyframes move {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 0 4px;
+            }
+        }
+        .terminal-wrapper {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+    <div class="matrix-background"></div>
+""", unsafe_allow_html=True)
+
+
 # --- Hide Sidebar ---
 st.markdown("""
     <style>
@@ -34,6 +74,10 @@ with open(counter_file, "r") as f:
 
 with open(counter_file, "w") as f:
     f.write(str(count))
+
+# --- Terminal Wrapper (to layer UI above animation) ---
+st.markdown('<div class="terminal-wrapper">', unsafe_allow_html=True)
+
 
 # --- Custom Styles ---
 st.markdown("""
@@ -71,35 +115,39 @@ st.markdown("""
 # --- Terminal Layout ---
 st.markdown("""
     <div class="terminal">
-        <h3>LaTerral@portfolio:~$</h3>
+        <h3>ldwit@portfolio:~$</h3>
     </div>
 """, unsafe_allow_html=True)
 
-st.markdown("""
-### 👨‍💻 Digital Terminal Access Portal
-Welcome to LaTerral Williams' interactive portfolio site. Type the correct command below to begin your journey:
+st.markdown("---")
 
+st.markdown("""
 ```bash
-LaTerral@portfolio:~$ _
+📟 Initializing Personal Portfolio Shell...
+Welcome to `LDWIT` portfolio site. Type the correct command below to enter:
+ldwit@portfolio:~$ _
 ```
 """)
 
 # --- Command Entry ---
 command = st.text_input("Enter command to continue:", label_visibility="collapsed")
 
-if command.lower().strip() in ["init", "start", "launch"]:
+if command.lower().strip() in ["init", "start", "launch", "sudo"]:
     with st.spinner("Loading environment..."):
         time.sleep(2)
     st.success("Access Granted ✅")
-    st.page_link("pages/Home.py", label="💡 Enter Site", icon="🚀")
+    st.page_link("pages/Home.py", label="➡️ Enter Site", icon="🔓")
 elif command:
     st.error("Access Denied ❌ – Try: 'init', 'start', or 'launch'")
 
 # --- Quote + Visitor Count ---
-st.markdown("<div class='quote'>\"Tell me and I forget, teach me and I may remember, involve me and I learn.\"<br>– Benjamin Franklin</div>", unsafe_allow_html=True)
+# st.markdown("<div class='quote'>\"Tell me and I forget, teach me and I may remember, involve me and I learn.\"<br>– Benjamin Franklin</div>", unsafe_allow_html=True)
 st.markdown(f"<p style='color:#00ff00;'>👾 Visitor #: <strong>{count}</strong></p>", unsafe_allow_html=True)
 
 # --- Optional Easter Egg ---
 if command.lower().strip() == "sudo":
     st.balloons()
     st.markdown("💥 You found the easter egg! 🎉")
+
+st.markdown('</div>', unsafe_allow_html=True)
+

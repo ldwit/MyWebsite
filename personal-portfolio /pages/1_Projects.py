@@ -116,19 +116,19 @@ st.markdown("### 🐍 <a id='python-projects'>Python Projects</a>", unsafe_allow
 
 st.markdown("#### 🔸 Band Name Generator App  ")
 st.markdown("Simple app that combines a city name and a pet’s name to create a band name.  ")
-st.page_link("/workspaces/MyWebsite/personal-portfolio /pages/BandNameGeneratorApp.py", label="View Project →")
+st.page_link("/workspaces/MyWebsite/personal-portfolio /pages/BandNameGeneratorApp.py", label="🔗 View Project →", icon="🎶")
 
 st.markdown("#### 🔸 Tip Calculator App  ")
 st.markdown("Streamlit-based app that calculates tip amount and splits bill among people.  ")
-st.page_link("/workspaces/MyWebsite/personal-portfolio /pages/TipCalculatorApp.py", label="View Project →")
+st.page_link("/workspaces/MyWebsite/personal-portfolio /pages/TipCalculatorApp.py", label="🔗 View Project →", icon="🧮")
 
 st.markdown("#### 🔸 Warrior Wizard Dragon Game  ")
 st.markdown("Interactive Streamlit game like Rock, Paper, Scissors.  ")
-st.page_link("/workspaces/MyWebsite/personal-portfolio /pages/WarriorWizardDragonApp.py", label="View Project →")
+st.page_link("/workspaces/MyWebsite/personal-portfolio /pages/WarriorWizardDragonApp.py", label="🔗 View Project →", icon="⚔️")
 
 st.markdown("#### 🔸 Treasure Island Game  ")
 st.markdown("Streamlit adventure game built as a beginner project.  ")
-st.page_link("/workspaces/MyWebsite/personal-portfolio /pages/TreasureIslandApp.py", label="View Project →")
+st.page_link("/workspaces/MyWebsite/personal-portfolio /pages/TreasureIslandApp.py", label="🔗 View Project →", icon="🗺️")
 st.markdown("---")
 
 
