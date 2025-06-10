@@ -119,4 +119,4 @@ st.markdown(
 )
 
 # --- Back Button ---
-st.page_link("pages/1_Projects.py", label="⬅️ Back to Projects", icon="⬅️")
+st.page_link("pages/Home.py", label="⬅️ Back to Home", icon="⬅️")

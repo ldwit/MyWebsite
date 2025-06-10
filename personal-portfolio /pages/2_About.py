@@ -121,6 +121,8 @@ st.markdown("""
 </p>
 """, unsafe_allow_html=True)
 
+st.markdown("---")
+
 # --- Back to Top Button ---
 st.markdown(
     """
@@ -134,3 +136,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
+# --- Back Button ---
+st.page_link("pages/Home.py", label="⬅️ Back to Home", icon="⬅️")
