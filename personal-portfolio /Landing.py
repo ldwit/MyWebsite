@@ -91,7 +91,7 @@ if command.lower().strip() in ["init", "start", "launch"]:
     with st.spinner("Loading environment..."):
         time.sleep(2)
     st.success("Access Granted ✅")
-    st.page_link("personal-portfolio /Home.py", label="💡 Enter Site", icon="🚀")
+    st.page_link("pages/Home.py", label="💡 Enter Site", icon="🚀")
 elif command:
     st.error("Access Denied ❌ – Try: 'init', 'start', or 'launch'")
 
