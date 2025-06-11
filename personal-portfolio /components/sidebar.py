@@ -1,4 +1,5 @@
 import streamlit as st
+import time
 from PIL import Image
 
 def render_sidebar():
@@ -59,3 +60,44 @@ def render_sidebar():
             """,
             unsafe_allow_html=True
         )
+
+        st.markdown("---")
+
+                # --- Handle Session State ---
+        if "crash_mode" not in st.session_state:
+            st.session_state.crash_mode = False
+
+        # --- Centered Button + Styling ---
+        st.markdown("""
+            <style>
+            .custom-danger-button .stButton > button {
+                text-align: center;               
+                background-color: #ff0000;
+                color: white;
+                font-weight: bold;
+                font-size: 1rem;
+                border: none;
+                padding: 0.75rem 1.5rem;
+                border-radius: 8px;
+                box-shadow: 0 0 8px red;
+                transition: transform 0.1s ease-in-out;
+            }
+            .custom-danger-button .stButton > button:hover {
+                transform: scale(1.05);
+                background-color: #cc0000;
+            }
+            </style>
+        """, unsafe_allow_html=True)
+
+        # --- Streamlit Button ---
+        with st.sidebar:
+                 with st.container():
+                    st.markdown('<div class="custom-danger-button">', unsafe_allow_html=True)
+                    if st.button("🟥 DO NOT PRESS"):
+                        st.session_state.crash_mode = True
+                    st.markdown('</div>', unsafe_allow_html=True)
+
+        # --- Redirect if Crash Triggered ---
+        if st.session_state.crash_mode:
+            st.switch_page("pages/Crash.py")
+

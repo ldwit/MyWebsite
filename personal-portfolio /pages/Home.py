@@ -1,4 +1,5 @@
 import streamlit as st
+import time
 from utils.style import apply_global_styles
 from components.sidebar import render_sidebar
 
