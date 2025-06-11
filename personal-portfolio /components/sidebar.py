@@ -4,6 +4,24 @@ from PIL import Image
 
 def render_sidebar():
     with st.sidebar:
+        # --- Lock Nav Bar Width ---
+        st.markdown("""
+            <style>
+            /* Lock sidebar width */
+            [data-testid="stSidebar"] {
+                min-width: 250px !important;
+                max-width: 250px !important;
+                width: 250px !important;
+            }
+
+            /* Hide resizer bar */
+            .block-container:has([data-testid="stSidebar"]) + div {
+                display: none !important;
+            }
+            </style>
+        """, unsafe_allow_html=True)
+
+
         # Hide default sidebar page navigation
         st.markdown("""
             <style>

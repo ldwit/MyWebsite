@@ -121,13 +121,23 @@ st.markdown("""
 
 st.markdown("---")
 
+
 st.markdown("""
-```bash
-📟 Initializing Personal Portfolio Shell...
-Welcome to `LDWIT` portfolio site. Type the correct command below to enter:
-ldwit@portfolio:~$ _
-```
-""")
+    <div style="
+        background-color: #0d0d0d;
+        color: #00ff00;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1.2rem;
+        padding: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 0 8px #00ff00;
+        margin-bottom: 1.5rem;
+    ">
+        📟 Initializing Personal Portfolio Shell...<br>
+        Welcome to <code>LDWIT</code> portfolio site. Type the correct <code>command</code> below to enter:<br>
+        <strong>ldwit@portfolio:~$</strong> _
+    </div>
+""", unsafe_allow_html=True)
 
 # --- Command Entry ---
 command = st.text_input("Enter command to continue:", label_visibility="collapsed")
