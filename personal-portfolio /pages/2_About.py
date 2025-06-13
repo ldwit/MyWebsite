@@ -95,7 +95,7 @@ st.markdown(
 )
 
 # --- Download Resume PDF ---
-with open("/workspaces/MyWebsite/personal-portfolio /assets/Resume_LWilliams.pdf", "rb") as file:
+with open("assets/Resume_LWilliams.pdf", "rb") as file:
     st.download_button(
         label="📥 Download My Resume",
         data=file,

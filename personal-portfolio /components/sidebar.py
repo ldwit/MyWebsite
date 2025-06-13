@@ -49,7 +49,13 @@ def render_sidebar():
         logo = Image.open(logo_path)
         st.image(logo, use_container_width=True)
 
-        st.markdown("### 🌐 Connect With Me")
+        st.markdown(
+            """
+            <h3 style='text-align: center; margin-top: 2rem;'>🌐 Connect With Me</h3>
+            """,
+            unsafe_allow_html=True
+        )
+
 
         st.markdown(
             """
