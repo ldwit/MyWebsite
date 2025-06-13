@@ -89,19 +89,18 @@ st.markdown(
     }
     </style>
 
-    <a href="https://drive.google.com/file/d/1S4OgAwVbRElWEe4pmw3jmXfv7lBnCadk/view?usp=sharing" target="_blank" class="button-link">📂 View My Resume</a>
+    <a href="https://drive.google.com/file/d/1S4OgAwVbRElWEe4pmw3jmXfv7lBnCadk/view?usp=sharing" target="_blank" class="button-link">📂 View Resume</a>
     """,
     unsafe_allow_html=True
 )
 
 # --- Download Resume PDF ---
-with open("assets/Resume_LWilliams.pdf", "rb") as file:
-    st.download_button(
-        label="📥 Download My Resume",
-        data=file,
-        file_name="LaTerral_Williams_Resume.pdf",
-        mime="application/pdf"
-    )
+try:
+    with open("assets/Resume_LWilliams.pdf", "rb") as file:
+        st.download_button("📄 Download Resume", file, file_name="Resume_LWilliams.pdf")
+except FileNotFoundError:
+    st.error("Resume file not found. Please check the file path or deployment.")
+
 
 st.markdown("---")
 
