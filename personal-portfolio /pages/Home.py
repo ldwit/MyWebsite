@@ -8,30 +8,53 @@ st.set_page_config(page_title="Home", page_icon="🏠", layout="wide")
 apply_global_styles()
 render_sidebar()
 
-# --- Header ---
+# --- Header (Matching ProfessionalDevelopment style) ---
 st.markdown(
     """
     <style>
-    .hero-text {
-        font-size: 2rem;
-        font-weight: 600;
-        color: #00FFF7;
-        margin-bottom: 0.5rem;
+    .typewriter h2 {
+      font-size: 28px;
+      font-family: "Audiowide", sans-serif;
+      color: #00FFF7;
+      overflow: hidden;
+      border-right: .15em solid #00FFF7;
+      white-space: nowrap;
+      margin: 0 auto 2rem auto;
+      letter-spacing: .05em;
+      animation: typing 3s steps(40, end), blink-caret .75s step-end infinite;
     }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: #00FFF7; }
+    }
+
     .quote {
         font-style: italic;
         font-size: 1.2rem;
         color: #AAAAAA;
+        text-align: left;
+        margin-top: -1rem;
     }
     </style>
-    <div class="hero-text">👋 Welcome! Thank you for visiting!</div><br>
+
+    <div class="typewriter">
+      <h2>👋 Welcome! Thank you for visiting!</h2>
+    </div>
     <div class="quote">
-        “Tell me and I forget, teach me and I may remember, involve me and I learn.” <br>
-        — Benjamin Franklin
+      “Tell me and I forget, teach me and I may remember, involve me and I learn.”<br>
+      — Benjamin Franklin
     </div>
     """,
     unsafe_allow_html=True
 )
+
+
 
 st.markdown("---")
 
