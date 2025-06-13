@@ -96,7 +96,7 @@ st.markdown(
 
 # --- Download Resume PDF ---
 try:
-    with open("assets/Resume_LWilliams.pdf", "rb") as file:
+    with open("personal-portfolio /assets/Resume_LWilliams.pdf", "rb") as file:
         st.download_button("📄 Download Resume", file, file_name="Resume_LWilliams.pdf")
 except FileNotFoundError:
     st.error("Resume file not found. Please check the file path or deployment.")
