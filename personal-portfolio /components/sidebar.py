@@ -36,10 +36,10 @@ def render_sidebar():
 
         # --- Your custom sidebar content below ---
         # st.sidebar.title("🔍 Navigation")
-        st.sidebar.page_link("/workspaces/MyWebsite/personal-portfolio /pages/Home.py", label="🏠 Home")
-        st.sidebar.page_link("/workspaces/MyWebsite/personal-portfolio /pages/1_Projects.py", label="📂 Projects")
-        st.sidebar.page_link("/workspaces/MyWebsite/personal-portfolio /pages/3_Professional_Development.py", label="🎓 Development")
-        st.sidebar.page_link("/workspaces/MyWebsite/personal-portfolio /pages/2_About.py", label="👤 About")
+        st.sidebar.page_link("pages/Home.py", label="🏠 Home")
+        st.sidebar.page_link("pages/1_Projects.py", label="📂 Projects")
+        st.sidebar.page_link("pages/3_Professional_Development.py", label="🎓 Development")
+        st.sidebar.page_link("pages/2_About.py", label="👤 About")
         st.markdown("---")
 
         # Logo
