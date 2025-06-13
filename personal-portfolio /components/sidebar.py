@@ -1,5 +1,6 @@
 import streamlit as st
 import time
+import os
 from PIL import Image
 
 def render_sidebar():
@@ -43,7 +44,9 @@ def render_sidebar():
         st.markdown("---")
 
         # Logo
-        logo = Image.open("assets/Futuristic_Tech_Logo.png")
+        
+        logo_path = os.path.join(os.path.dirname(__file__), "..", "assets", "Futuristic_Tech_Logo.png")
+        logo = Image.open(logo_path)
         st.image(logo, use_container_width=True)
 
         st.markdown("### 🌐 Connect With Me")
