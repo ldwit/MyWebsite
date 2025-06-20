@@ -1,5 +1,6 @@
 import streamlit as st
 import time
+import os
 from PIL import Image
 
 def render_sidebar():
@@ -37,16 +38,24 @@ def render_sidebar():
         # --- Your custom sidebar content below ---
         # st.sidebar.title("🔍 Navigation")
         st.sidebar.page_link("pages/Home.py", label="🏠 Home")
-        st.sidebar.page_link("/workspaces/MyWebsite/personal-portfolio /pages/1_Projects.py", label="📂 Projects")
-        st.sidebar.page_link("/workspaces/MyWebsite/personal-portfolio /pages/3_Professional_Development.py", label="🎓 Development")
-        st.sidebar.page_link("/workspaces/MyWebsite/personal-portfolio /pages/2_About.py", label="👤 About")
+        st.sidebar.page_link("pages/1_Projects.py", label="📂 Projects")
+        st.sidebar.page_link("pages/3_Professional_Development.py", label="🎓 Development")
+        st.sidebar.page_link("pages/2_About.py", label="👤 About")
         st.markdown("---")
 
         # Logo
-        logo = Image.open("assets/Futuristic_Tech_Logo.png")
+        
+        logo_path = os.path.join(os.path.dirname(__file__), "..", "assets", "Futuristic_Tech_Logo.png")
+        logo = Image.open(logo_path)
         st.image(logo, use_container_width=True)
 
-        st.markdown("### 🌐 Connect With Me")
+        st.markdown(
+            """
+            <h3 style='text-align: center; margin-top: 2rem;'>🌐 Connect With Me</h3>
+            """,
+            unsafe_allow_html=True
+        )
+
 
         st.markdown(
             """

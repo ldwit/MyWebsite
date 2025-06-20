@@ -63,6 +63,7 @@ st.markdown("""
 — Nelson Mandela
 </div>
 """, unsafe_allow_html=True)
+
 st.markdown("---")
 
 # --- Credly Profile ---
