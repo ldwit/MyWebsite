@@ -69,31 +69,62 @@ st.markdown("---")
 st.markdown("🔗 [My Credly Profile](https://www.credly.com/users/ldwit)")
 st.markdown("---")
 
+# --- Custom CSS for Cert alignment ---
+st.markdown("""
+    <style>
+    .cert-container {
+        text-align: center;
+        padding: 10px;
+    }
+    .cert-container img {
+        margin-bottom: 0.5rem;
+    }
+    .cert-caption {
+        font-size: 0.85rem;
+        color: #DDD;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
+
 # --- Current Certifications ---
 st.markdown("### 🏅 Current Certifications")
 
-col1, col2, col3 = st.columns(3)
+col1, col2, col3, col4 = st.columns(4)
+
 
 with col1:
-    st.image(
-        "https://images.credly.com/size/340x340/images/08096465-cbfc-4c3e-93e5-93c5aa61f23e/image.png",
-        caption="Associate Cloud Engineer (Google Cloud)",
-        width=115
-    )
+    st.markdown("""
+        <div class="cert-container">
+            <img src="https://images.credly.com/size/340x340/images/0bf0f2da-a699-4c82-82e2-56dcf1f2e1c7/image.png" width="150"/>
+            <div class="cert-caption">Google Cybersecurity Professional Certificate V2</div>
+        </div>
+    """, unsafe_allow_html=True)
 
 with col2:
-    st.image(
-        "https://images.credly.com/size/340x340/images/fc1352af-87fa-4947-ba54-398a0e63322e/security-compliance-and-identity-fundamentals-600x600.png",
-        caption="Security, Compliance, & Identity Fundamentals",
-        width=115
-    )
+    st.markdown("""
+        <div class="cert-container">
+            <img src="https://images.credly.com/size/340x340/images/08096465-cbfc-4c3e-93e5-93c5aa61f23e/image.png" width="150"/>
+            <div class="cert-caption">Associate Cloud Engineer (Google Cloud)</div>
+        </div>
+    """, unsafe_allow_html=True)
 
 with col3:
-    st.image(
-        "https://images.credly.com/size/340x340/images/2030e43f-8003-4d4b-9630-847add403c87/image.png",
-        caption="Certified in Cybersecurity (ISC2)",
-        width=115
-    )
+    st.markdown("""
+        <div class="cert-container">
+            <img src="https://images.credly.com/size/340x340/images/fc1352af-87fa-4947-ba54-398a0e63322e/security-compliance-and-identity-fundamentals-600x600.png" width="150"/>
+            <div class="cert-caption">Security, Compliance, & Identity Fundamentals (Microsoft)</div>
+        </div>
+    """, unsafe_allow_html=True)
+
+with col4:
+    st.markdown("""
+        <div class="cert-container">
+            <img src="https://images.credly.com/size/340x340/images/2030e43f-8003-4d4b-9630-847add403c87/image.png" width="150"/>
+            <div class="cert-caption">Certified in Cybersecurity (ISC2)</div>
+        </div>
+    """, unsafe_allow_html=True)
+
 
 st.markdown("---")
 
