@@ -177,7 +177,7 @@ st.code("""
         "ecr:GetDownloadUrlForLayer",
         "ecr:BatchGetImage"
       ],
-      "Resource": "arn:aws:ecr:us-east-1:137068223119:repository/sports-api"
+      "Resource": "arn:aws:ecr:us-east-1:<yourawsaccountid>:repository/sports-api"
     }
   ]
 }
